@@ -10,5 +10,18 @@ const day = date.getDate();
 // .getMonth() metodo que devuelve un numero entre el 0 y 11 (mes del año comienxa con indice 0)
 const month = date.getMonth() + 1;
 
-// .getFullYear metodo que retorna el numero del año
+// .getFullYear() metodo que retorna el numero del año
 const year = date.getFullYear();
+
+// .getHours() retorna numero de 0 a 23 las horas del dia
+const hours = date.getHours();
+
+// .getminutes() metodo que devuelve los minutos de 0 a 59
+const minutes = date.getMinutes();
+
+// creacion de constante para formater la fecha con template literals
+const formattedDate = `${day}-${month}-${year}`;
+// console.log(formattedDate);
+
+// tilizacion de propiedad textConent
+currentDateParagraph.textContent = formattedDate;

@@ -25,3 +25,25 @@ const formattedDate = `${day}-${month}-${year}`;
 
 // tilizacion de propiedad textConent
 currentDateParagraph.textContent = formattedDate;
+
+// Probando metodo .split() encadenado con .reverse() y .join()
+// const exampleSentence  = "selur pmaCedoCeerf".split('').reverse().join();
+// console.log(exampleSentence);
+
+// Se agrega el evento change para detectar el cambion en el elemento html
+dateOptionsSelectElement.addEventListener('change', () => {
+  
+  // Declaracion switch para comparar la seleccion y reflejar en pantalla
+  switch (dateOptionsSelectElement.value) {
+    case 'yyyy-mm-dd':
+      currentDateParagraph.textContent = formattedDate.split('-').reverse().join('-');
+      break;
+      // Se declara con un template literals para el casa de mes, dia, año, hora y minuto
+      case "mm-dd-yyyy-h-mm":
+      currentDateParagraph.textContent = `${month}-${day}-${year} ${hours} Hours ${minutes} Minutes`;
+      break;
+      default:
+    currentDateParagraph.textContent = formattedDate;
+      }
+
+});
